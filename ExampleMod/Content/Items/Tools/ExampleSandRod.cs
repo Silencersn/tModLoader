@@ -85,5 +85,11 @@ namespace ExampleMod.Content.Items.Tools
 			}
 			player.LimitPointToPlayerReachableArea(ref position);
 		}
+
+		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
+			// Reset Item.shoot
+			Item.shoot = ProjectileID.None;
+			return base.Shoot(player, source, position, velocity, type, damage, knockback);
+		}
 	}
 }
