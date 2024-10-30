@@ -91,5 +91,13 @@ namespace ExampleMod.Content.Items.Tools
 			Item.shoot = ProjectileID.None;
 			return base.Shoot(player, source, position, velocity, type, damage, knockback);
 		}
+
+		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
+		public override void AddRecipes() {
+			CreateRecipe()
+				.AddIngredient<ExampleItem>()
+				.AddTile<Tiles.Furniture.ExampleWorkbench>()
+				.Register();
+		}
 	}
 }
