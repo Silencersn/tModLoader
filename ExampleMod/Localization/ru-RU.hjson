@@ -1019,6 +1019,11 @@ Mods: {
 				// DisplayName: Custom Item Drawing Showcase
 				// Tooltip: ""
 			}
+
+			ExampleSandRod: {
+				// DisplayName: Example Sand Rod
+				// Tooltip: Magically moves sand
+			}
 		}
 
 		# Projectile display names mainly show in chat when a player dies from it.
