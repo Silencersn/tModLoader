@@ -739,6 +739,7 @@ Mods: {
 					'''
 					{$CommonItemTooltip.SummonTagDamage}
 					{$CommonItemTooltip.Whips}
+					<right> to change it to the advanced version
 					Hold for longer reach
 					'''
 			}
@@ -749,6 +750,7 @@ Mods: {
 					'''
 					{0}% summon tag damage to the next minion or sentry hit
 					{$CommonItemTooltip.Whips}
+					<right> to change it to the basic version
 					Hold for longer reach
 					'''
 			}
