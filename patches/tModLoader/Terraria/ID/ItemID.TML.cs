@@ -205,6 +205,9 @@ partial class ItemID
 			{ PlatinumOre, (3, 13) },
 		};
 
+		/// <summary>
+		/// If <c>&gt; 0</c> for a given item type (<see cref="Item.type"/>), then that item will be swapped for the new item type when right clicking.
+		/// </summary>
 		public static int[] RightClickItemSwap = Factory.CreateIntSet(-1,
 			VoidLens,						ClosedVoidBag,
 			ClosedVoidBag,					VoidLens,
@@ -228,6 +231,11 @@ partial class ItemID
 			ShellphoneDummy,				Shellphone
 		);
 
+		/// <summary>
+		/// Set to determine the sound style to be played after right click item swap.
+		/// <br/> If true, use SoundID.Unlock.
+		/// <br/> Defaults to use SoundID.Grab.
+		/// </summary>
 		public static bool[] UseUnlockSoundStyleAfterItemSwap = Factory.CreateBoolSet(
 			RubblemakerSmall, RubblemakerMedium, RubblemakerLarge,
 			EncumberingStone, UncumberingStone,
