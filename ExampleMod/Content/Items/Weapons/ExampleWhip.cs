@@ -12,6 +12,7 @@ namespace ExampleMod.Content.Items.Weapons
 		public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(ExampleWhipDebuff.TagDamage);
 
 		public override void SetStaticDefaults() {
+			// Change it to ExampleWhipAdvanced after right click in inventory.
 			ItemID.Sets.RightClickItemSwap[Type] = ModContent.ItemType<ExampleWhipAdvanced>();
 		}
 

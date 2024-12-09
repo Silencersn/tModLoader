@@ -8,23 +8,22 @@ namespace ExampleMod.Content.Items.Tools
 	public class ExampleShellphone : ModItem
 	{
 		public override void SetStaticDefaults() {
+			// After right clicking Shellphone(Model) in inventory, it will become Shellphone(Ocean).
 			ItemID.Sets.RightClickItemSwap[Type] = ItemID.ShellphoneOcean;
+
+			// After right clicking Shellphone(Home) in inventory, it will become Shellphone(Model).
 			ItemID.Sets.RightClickItemSwap[ItemID.Shellphone] = Type;
+
+			// Make the sound when changing is SoundID.Unlook that is the same as other Shellphone.
 			ItemID.Sets.UseUnlockSoundStyleAfterItemSwap[Type] = true;
 		}
 
 		public override void SetDefaults() {
-			Item.useTurn = true;
-			Item.width = 20;
-			Item.height = 20;
-			Item.useStyle = ItemUseStyleID.HoldUp;
-			Item.useTime = 90;
-			Item.UseSound = SoundID.Item6;
-			Item.useAnimation = 90;
-			Item.SetShopValues(ItemRarityColor.Yellow8, Item.sellPrice(0, 10));
+			Item.CloneDefaults(ItemID.Shellphone);
 		}
 
 		public override void UpdateInfoAccessory(Player player) {
+			// Displays all infos
 			player.accWatch = 3;
 			player.accDepthMeter = 1;
 			player.accCompass = 1;
