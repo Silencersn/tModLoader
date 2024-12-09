@@ -11,6 +11,10 @@ namespace ExampleMod.Content.Items.Weapons
 	{
 		public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(ExampleWhipDebuff.TagDamage);
 
+		public override void SetStaticDefaults() {
+			ItemID.Sets.RightClickItemSwap[Type] = ModContent.ItemType<ExampleWhipAdvanced>();
+		}
+
 		public override void SetDefaults() {
 			// This method quickly sets the whip's properties.
 			// Mouse over to see its parameters.
