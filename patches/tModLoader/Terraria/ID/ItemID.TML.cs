@@ -205,6 +205,35 @@ partial class ItemID
 			{ PlatinumOre, (3, 13) },
 		};
 
+		public static int[] RightClickItemSwap = Factory.CreateIntSet(-1,
+			VoidLens,						ClosedVoidBag,
+			ClosedVoidBag,					VoidLens,
+			CapricornLegs,					CapricornTail,
+			CapricornTail,					CapricornLegs,
+			RubblemakerSmall,				RubblemakerMedium,
+			RubblemakerMedium,				RubblemakerLarge,
+			RubblemakerLarge,				RubblemakerSmall,
+			EncumberingStone,				UncumberingStone,
+			UncumberingStone,				EncumberingStone,
+			DontHurtComboBook,				DontHurtComboBookInactive,
+			DontHurtComboBookInactive,		DontHurtComboBook,
+			DontHurtCrittersBook,			DontHurtCrittersBookInactive,
+			DontHurtCrittersBookInactive,	DontHurtCrittersBook,
+			DontHurtNatureBook,				DontHurtNatureBookInactive,
+			DontHurtNatureBookInactive,		DontHurtNatureBook,
+			Shellphone,						ShellphoneOcean,
+			ShellphoneOcean,				ShellphoneHell,
+			ShellphoneHell,					ShellphoneSpawn,
+			ShellphoneSpawn,				Shellphone,
+			ShellphoneDummy,				Shellphone
+		);
+
+		public static bool[] UseUnlockSoundStyleAfterItemSwap = Factory.CreateBoolSet(
+			RubblemakerSmall, RubblemakerMedium, RubblemakerLarge,
+			EncumberingStone, UncumberingStone,
+			Shellphone, ShellphoneHell, ShellphoneOcean, ShellphoneSpawn
+		);
+
 		/// <summary>
 		/// Set to <see langword="true"/> to make this Item set its mana cost to 0 whenever <see cref="Player.spaceGun"/> is set to <see langword="true"/>.
 		/// </summary>
