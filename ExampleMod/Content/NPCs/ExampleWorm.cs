@@ -1,4 +1,4 @@
-﻿using ExampleMod.Content.Items.Placeable.Banners;
+using ExampleMod.Content.Items.Placeable.Banners;
 using ExampleMod.NPCs;
 using Microsoft.Xna.Framework;
 using System.IO;
@@ -102,6 +102,7 @@ namespace ExampleMod.Content.NPCs
 				Hide = true // Hides this NPC from the Bestiary, useful for multi-part NPCs whom you only want one entry.
 			};
 			NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, value);
+			NPCID.Sets.RespawnEnemyID[NPC.type] = ModContent.NPCType<ExampleWormHead>();
 		}
 
 		public override void SetDefaults() {
@@ -110,6 +111,7 @@ namespace ExampleMod.Content.NPCs
 
 			// Extra body parts should use the same Banner value as the main ModNPC.
 			Banner = ModContent.NPCType<ExampleWormHead>();
+			BannerItem = ModContent.ItemType<ExampleWormHeadBanner>();
 		}
 
 		public override void Init() {
@@ -124,6 +126,7 @@ namespace ExampleMod.Content.NPCs
 				Hide = true // Hides this NPC from the Bestiary, useful for multi-part NPCs whom you only want one entry.
 			};
 			NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, value);
+			NPCID.Sets.RespawnEnemyID[NPC.type] = ModContent.NPCType<ExampleWormHead>();
 		}
 
 		public override void SetDefaults() {
@@ -132,6 +135,7 @@ namespace ExampleMod.Content.NPCs
 
 			// Extra body parts should use the same Banner value as the main ModNPC.
 			Banner = ModContent.NPCType<ExampleWormHead>();
+			BannerItem = ModContent.ItemType<ExampleWormHeadBanner>();
 		}
 
 		public override void Init() {
