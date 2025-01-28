@@ -111,7 +111,6 @@ namespace ExampleMod.Content.NPCs
 
 			// Extra body parts should use the same Banner value as the main ModNPC.
 			Banner = ModContent.NPCType<ExampleWormHead>();
-			BannerItem = ModContent.ItemType<ExampleWormHeadBanner>();
 		}
 
 		public override void Init() {
@@ -135,7 +134,6 @@ namespace ExampleMod.Content.NPCs
 
 			// Extra body parts should use the same Banner value as the main ModNPC.
 			Banner = ModContent.NPCType<ExampleWormHead>();
-			BannerItem = ModContent.ItemType<ExampleWormHeadBanner>();
 		}
 
 		public override void Init() {
